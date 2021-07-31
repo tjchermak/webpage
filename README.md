@@ -3,20 +3,20 @@
 ## Cloning the Repository
 
 ```
-$git clone https://github.com/ajeetraina/webpage
+$git clone https://github.com/tjchermak/webpage
 ```
 
 ## Building Docker Image
 
 ```
 $cd webpage
-$docker build -t ajeetraina/webpage .
+$docker build -t tjchermak/webpage .
 ```
 
 ## Running the Container
 
 ```
-$docker run -d -p 80:80 ajeetraina/webpage
+$docker run -d -p 80:80 tjchermak/webpage
 ```
 
 ## Jenkinsfile
@@ -35,7 +35,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("ajeetraina/webpage")
+        app = docker.build("tjchermak/webpage")
     }
 
     stage('Test image') {
